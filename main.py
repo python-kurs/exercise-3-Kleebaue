@@ -1,10 +1,9 @@
 # Exercise 3
 from pathlib import Path
-import csv
 
 # import functions from utils here
-from utils import count
-    
+from utils import count, writefile
+
 # 1. Contstruct the path to the text file in the data directory using the `pathlib` module [2P]
 d = Path('/home/mklee/git/exercise-3-Kleebaue')
 data_dir = d / 'data'
@@ -29,8 +28,6 @@ output_dir.mkdir(parents=True, exist_ok=True)
 #    item_name_1, item_count_1
 #    item_name_2, item_count_2
 #    ...
-with open(output_dir / 'Count_unique_cars.csv', "w") as fd:
-    writer = csv.DictWriter(fd, fieldnames=["item", "count"]) 
-    writer.writeheader()
-    for key in countcars.keys():
-        fd.write("%s,%s\n"%(key,countcars[key])) 
+# using writefile function from utils to write file 
+
+writefile(countcars,output_dir,'Count_unique_cars.csv',"item","count")
