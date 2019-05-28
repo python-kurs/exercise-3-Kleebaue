@@ -5,7 +5,7 @@
 
 # ---------
 
+# Counts the occurences of each item in a text file
 def count(listtocount):
     [[y,listtocount.count(y)] for y in set(listtocount)]
-    print(dict((y,listtocount.count(y)) for y in set(listtocount)))
-    
+    return(dict((y,listtocount.count(y)) for y in set(listtocount)))
