@@ -7,7 +7,7 @@ from utils import count, writefile
 # 1. Contstruct the path to the text file in the data directory using the `pathlib` module [2P]
 d = Path('/home/mklee/git/exercise-3-Kleebaue')
 data_dir = d / 'data'
-output_dir = d / "solution"
+output_dir = d / 'solution'
 
 # 2. Read the text file [2P]
 # splitlines removes /n 
